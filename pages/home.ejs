@@ -1,0 +1,26 @@
+<%- include('../partials/head', {title : 'Home Page'}) %>
+<head><link rel="stylesheet" href="/home.css"/></head>
+<body>
+    <navbar>
+        <a href="http://localhost:4002/host-home">Add Home</a>
+        <a href="http://localhost:4002/book-home">Book Home</a>
+    </navbar>
+    <h1>Welcome to AirBNB</h1>    
+        <h3>Homes you registered : -</h3>
+        <!--{{details of home 1(in k-v) }, {details of home 2}}-->
+        <ul>
+            <% registeredhomes.forEach((home, index)=> { %>
+                <li>
+                    <strong>
+                        <%= index + 1 %>.
+                    </strong>
+                    Name: <%= home.name %>,
+                    Cost: <%= home.cost %>,
+                    Location: <%= home.location %>,
+                    Rating : <%=home.rating %>
+                </li>
+                <% }) %>
+        </ul>
+
+</body>
+</html>
