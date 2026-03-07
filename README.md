@@ -1,4 +1,3 @@
-```markdown
 # Air-BNB Server Design
 
 This project is a **basic backend design for an AirBnB-like website**.  
