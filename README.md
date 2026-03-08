@@ -29,6 +29,7 @@ The following technologies were used to build this project:
 - **EJS (Embedded JavaScript)** – Used for dynamic HTML templates
 - **HTML & CSS** – Used to design the user interface
 - **NPM** – Used to manage project dependencies
+- **MVC** - Used as an architectural pattern for organizing and structuring the application efficiently.
 
 ---
 

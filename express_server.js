@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 
 const { userRouter } = require('./Routers/userRouter');
 const { hostRouter } = require('./Routers/hostRouter');
-const { registeredHomes } = require('./Routers/hostRouter');
+const { registeredHomes } = require('./controllers/hostController');
 
 // make public folder static
 app.use(express.static(path.join(root,'public')));
