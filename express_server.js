@@ -24,12 +24,13 @@ app.set('view engine','ejs');
 app.set('views','pages');
 
 // home page tackling middlewares
-
-app.get('/',(req,res)=>{
-    console.log("Home Page");
-    // res.sendFile(path.join(root,'pages','home.html')); now it's an ejs file
-    res.render('home',{registeredhomes : Home.fecthAll()});    
+app.get('/',(req,res,next)=>{
+    // first get the fileContents(registeredhomes) and then render home.ejs
+    Home.fetchAll((fileContents)=>{
+        res.render('home',{registeredhomes : fileContents});
+    })
 })
+
 
 app.use(userRouter); 
 app.use(hostRouter);
@@ -40,6 +41,13 @@ app.use(errorController.pageNotFfound);
 app.listen(4002,()=>{
     console.log("Server started at http://localhost:4002");
 })
+
+// // Old way of home-tackling
+// app.get('/',(req,res)=>{
+//     console.log("Home Page");
+//     // res.sendFile(path.join(root,'pages','home.html')); now it's an ejs file
+//     res.render('home',{registeredhomes : Home.fecthAll()});    
+// })
 
 // '''Incoming Data Parsing without BodyParser'''
 

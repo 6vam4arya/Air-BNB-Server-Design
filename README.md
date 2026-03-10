@@ -43,6 +43,7 @@ The following technologies were used to build this project:
    - The home is **added to the home listings**
 4. The new listing **appears on the home page**.
 5. The submitted data is also **logged in the server console**.
+6. The submitted data persists in the database even after the server is restarted or terminated. As a result, all registered homes from previous server sessions continue to appear on the home page.
 
 This flow helps demonstrate how **frontend forms communicate with backend servers**.
 
