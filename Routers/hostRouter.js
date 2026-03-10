@@ -14,8 +14,8 @@ hostRouter.use(express.static(path.join(root_dir,'public')));
 
 hostRouter.get('/host-home',hostController.getAddHome);
 
-hostRouter.post('/submit-form',express.urlencoded());
-// someone submits a form with some details, parse it and store in the "body" attribute of "request" object
+// parsing 
+hostRouter.use(express.urlencoded());
 
 hostRouter.post('/submit-form',hostController.handledetails);
 

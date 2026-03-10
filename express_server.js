@@ -12,7 +12,9 @@ const bodyParser = require('body-parser');
 
 const { userRouter } = require('./Routers/userRouter');
 const { hostRouter } = require('./Routers/hostRouter');
-const { registeredHomes } = require('./controllers/hostController');
+// const { registeredHomes } = require('./controllers/hostController');
+const errorController = require('./controllers/errorController');
+let Home = require('./models/AddedHomes');
 
 // make public folder static
 app.use(express.static(path.join(root,'public')));
@@ -26,17 +28,14 @@ app.set('views','pages');
 app.get('/',(req,res)=>{
     console.log("Home Page");
     // res.sendFile(path.join(root,'pages','home.html')); now it's an ejs file
-    res.render('home',{registeredhomes : registeredHomes});    
+    res.render('home',{registeredhomes : Home.fecthAll()});    
 })
 
 app.use(userRouter); 
 app.use(hostRouter);
 
 // Not found page
-app.use((req,res,next)=>{
-    console.log('This is NOT FOUND!');
-    res.status(404).render('404');
-})
+app.use(errorController.pageNotFfound);
 
 app.listen(4002,()=>{
     console.log("Server started at http://localhost:4002");

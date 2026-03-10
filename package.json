@@ -1,0 +1,14 @@
+{
+  "name": "air-bnb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express_server.js",
+  "scripts": {
+    "start": "node express_server.js"
+  },
+  "author": "Vamika Arya",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -5,12 +5,17 @@ exports.getAddHome = (req,res,next)=>{
 
 
 // handle submission 
-let details = [];
+// let details = [];
+let Home = require('../models/AddedHomes');
 
 // handle home details
 exports.handledetails = (req,res,next)=>{
-    details.push(req.body);
-    console.log(details);    
+    // create an object for incoming details     
+    let newHome = new Home(req.body.housename, req.body.cost, req.body.rating, req.body.location);
+    // details.push(newHome);
+    newHome.save();
+    console.log(newHome);
     res.render('submit-form');
-    exports.registeredhomes = details;
 }
+
+// exports.registeredHomes = details;
