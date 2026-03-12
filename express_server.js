@@ -32,8 +32,8 @@ app.get('/',(req,res,next)=>{
 })
 
 
-app.use(userRouter); 
-app.use(hostRouter);
+app.use('/user',userRouter); 
+app.use('/host',hostRouter);
 
 // Not found page
 app.use(errorController.pageNotFfound);

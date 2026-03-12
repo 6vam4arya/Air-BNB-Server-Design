@@ -14,6 +14,8 @@ module.exports = class Home {
         this.cost = cost;
         this.rating = rating;
         this.location = location;
+        // assigning unique ID to every home
+        this.id = Math.random();
     }
 
     // save this 

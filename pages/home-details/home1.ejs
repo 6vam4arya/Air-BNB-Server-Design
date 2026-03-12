@@ -1,0 +1,12 @@
+<%- include('../../partials/head',{title : 'details'}) %>
+
+<body>
+    <h1>Your home details for ID = <%= homeID %> is</h1>
+    <li>
+        Name : <%= homeObj.housename %>,
+        Location : <%= homeObj.location %>,
+        Rating : <%= homeObj.rating %>,
+        ID : <%= homeObj.id %>,
+        Price : <%= homeObj.cost %>,
+    </li>
+</body>

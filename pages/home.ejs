@@ -2,8 +2,8 @@
 <head><link rel="stylesheet" href="/home.css"/></head>
 <body>
     <navbar>
-        <a href="http://localhost:4002/host-home">Add Home</a>
-        <a href="http://localhost:4002/book-home">Book Home</a>
+        <a href="http://localhost:4002/host/host-home">Add Home</a>
+        <a href="http://localhost:4002/user/book-home">Book Home</a>
     </navbar>
     <h1>Welcome to AirBNB</h1>    
         <h3>Homes you registered : -</h3>
@@ -17,8 +17,11 @@
                     Name: <%= home.housename %>,
                     Cost: <%= home.cost %>,
                     Location: <%= home.location %>,
+                    Registered Home ID : <%= home.id %>,
                     Rating : <%=home.rating %>
-                    <a href='http://localhost:4002/book-home'><button>Book</button> </a>
+                    <a href='http://localhost:4002/user/book-home'><button>Book</button> </a>
+                    <br>
+                    <a href='http://localhost:4002/user/<%=home.id%>'><button>Details</button> </a>
                 </li>
                 <% }) %>
         </ul>
