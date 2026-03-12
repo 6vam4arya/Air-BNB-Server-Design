@@ -4,11 +4,18 @@
   "description": "",
   "main": "express_server.js",
   "scripts": {
-    "start": "node express_server.js"
+    "tailwind": "npx tailwindcss -i ./input.css -o ./output.css",
+    "start": "npm run tailwind && node express_server.js"
   },
   "author": "Vamika Arya",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
     "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1"
   }
 }

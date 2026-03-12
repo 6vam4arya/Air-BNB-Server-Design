@@ -30,6 +30,7 @@ The following technologies were used to build this project:
 - **HTML & CSS** – Used to design the user interface
 - **NPM** – Used to manage project dependencies
 - **MVC** - Used as an architectural pattern for organizing and structuring the application efficiently.
+-**Tailwind CSS** - Used for providing responsive and seamless design
 
 ---
 
@@ -55,7 +56,8 @@ This flow helps demonstrate how **frontend forms communicate with backend server
 
 This is the main page where available homes are displayed.
 
-![Home Page](image.png)
+<!-- Old Design ![Home Page](image.png) -->
+![Home Page](image-5.png)
 
 ---
 
@@ -63,7 +65,8 @@ This is the main page where available homes are displayed.
 
 Hosts can use this page to **add their home listing** by filling out a form.
 
-![Add Home Page](image-1.png)
+<!--  Old Design ![Add Home Page](image-1.png) -->
+![Add Home Page](image-6.png)
 
 ---
 
@@ -71,7 +74,8 @@ Hosts can use this page to **add their home listing** by filling out a form.
 
 After filling the form, the host submits the details to the server.
 
-![Form Submission](image-2.png)
+<!--  Old Design ![Form Submission](image-2.png) -->
+![Form Submission](image-7.png)
 
 ---
 
@@ -79,7 +83,8 @@ After filling the form, the host submits the details to the server.
 
 Once submitted, the new home appears on the **home page listing**.
 
-![Home Added](image-3.png)
+<!-- Old Design  ![Home Added](image-3.png) -->
+![Home Added](image-8.png)
 
 ---
 
@@ -87,5 +92,6 @@ Once submitted, the new home appears on the **home page listing**.
 
 The submitted home details are also **printed in the server console** for verification.
 
-![Console Output](image-4.png)
+<!-- Old Design  ![Console Output](image-4.png) -->
+![Console Output](image-9.png)
 
