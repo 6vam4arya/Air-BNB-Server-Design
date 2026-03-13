@@ -1,2 +1,2 @@
 @import "tailwindcss";
-@source "./pages/**/*.ejs";
+@source "./views/**/*.ejs";

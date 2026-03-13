@@ -4,8 +4,8 @@
   "description": "",
   "main": "express_server.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./input.css -o ./output.css",
-    "start": "npm run tailwind && node express_server.js"
+    "tailwind": "npx tailwindcss -i ./input.css -o ./output.css --watch",
+    "start": "concurrently \"npm run tailwind\"  \"node express_server.js\""
   },
   "author": "Vamika Arya",
   "license": "ISC",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.27",
+    "concurrently": "^9.2.1",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1"
   }

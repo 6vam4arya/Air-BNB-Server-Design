@@ -1,1 +1,26 @@
-[{"housename":"House 1 ","cost":"2000","rating":"4.9","location":"UK","id":0.895958837773043},{"housename":"House 2 ","cost":"5000","rating":"5","location":"India","id":0.9006507756243529},{"housename":"House 3 ","cost":"30000","rating":"4","location":"Australia","id":0.8951454415797693}]
+[
+  {
+    "housename": "Purple Floral Princess Theme Room",
+    "cost": "2000",
+    "rating": "4.9",
+    "location": "UK",
+    "id": 0.895958837773043,
+    "description": "A charming princess-themed room adorned with lavender walls, floral accents, and a cozy reading nook. Perfect for a fairytale experience."
+  },
+  {
+    "housename": "Golden Sunset Luxury Villa",
+    "cost": "5000",
+    "rating": "5",
+    "location": "India",
+    "id": 0.9006507756243529,
+    "description": "An opulent villa with sweeping sunset views, golden decor, and spacious living areas, designed for ultimate comfort and elegance."
+  },
+  {
+    "housename": "Ocean Breeze Coastal Retreat",
+    "cost": "30000",
+    "rating": "4",
+    "location": "Australia",
+    "id": 0.8951454415797693,
+    "description": "A serene coastal house with ocean views, airy interiors, and a relaxing veranda. Ideal for escaping the hustle and reconnecting with nature."
+  }
+]

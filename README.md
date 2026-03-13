@@ -45,6 +45,7 @@ The following technologies were used to build this project:
 4. The new listing **appears on the home page**.
 5. The submitted data is also **logged in the server console**.
 6. The submitted data persists in the database even after the server is restarted or terminated. As a result, all registered homes from previous server sessions continue to appear on the home page.
+7. For viewing detailed description, user can click on **details** button.
 
 This flow helps demonstrate how **frontend forms communicate with backend servers**.
 
@@ -66,7 +67,7 @@ This is the main page where available homes are displayed.
 Hosts can use this page to **add their home listing** by filling out a form.
 
 <!--  Old Design ![Add Home Page](image-1.png) -->
-![Add Home Page](image-6.png)
+![Add Home Page](image-11.png)
 
 ---
 
@@ -87,6 +88,12 @@ Once submitted, the new home appears on the **home page listing**.
 ![Home Added](image-8.png)
 
 ---
+
+### Data Logged in Console
+The detailed description is hidden from the home page for brevity, but is displayed on each individual home's details page.
+
+![Home Details](image-10.png)
+
 
 ### Data Logged in Console
 

@@ -9,11 +9,12 @@ const filePath = path.join(root,'fake-database','data.json');
 
 module.exports = class Home {
     // constructor method 
-    constructor(housename,cost,rating,location){
+    constructor(housename,cost,rating,location,description){
         this.housename = housename; //h_name is my property(changed to name on LHS)
         this.cost = cost;
         this.rating = rating;
         this.location = location;
+        this.description = description;
         // assigning unique ID to every home
         this.id = Math.random();
     }
