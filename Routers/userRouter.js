@@ -18,6 +18,10 @@ userRouter.get('/book-home',userController.bookHome);
 // getting home details route
 userRouter.get('/:homeID',userController.getHomeDetails);
 
+// Add To Favourites
+userRouter.get('/fav/:homeID',userController.addtofav);
 
+// Get Favourite Page
+userRouter.get('/favourites/homes',userController.getFav);
 
 module.exports.userRouter = userRouter;

@@ -1,0 +1,45 @@
+<%- include('../partials/head.ejs', { title: 'Favourites' }) %>
+<link rel="stylesheet" href="../output.css"/>
+
+<body class="bg-gray-100 min-h-screen p-8">
+
+  <h1 class="text-3xl font-bold text-gray-800 mb-6">Your Favourites</h1>
+
+  <ul class="space-y-6">
+    <% favHomes.forEach((home, index) => { %>
+      <li class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition relative">
+        
+        <!-- Home Info -->
+        <div class="mb-4">
+          <strong class="text-lg text-gray-800">
+            <%= index + 1 %>.
+          </strong>
+          <span class="ml-2 text-gray-700 font-medium">
+            <%= home.housename %>
+          </span>
+        </div>
+
+        <p class="text-gray-600 mb-1">Cost: $<%= home.cost %></p>
+        <p class="text-gray-600 mb-1">Location: <%= home.location %></p>
+        <p class="text-gray-600 mb-1">Registered Home ID: <%= home.id %></p>
+        <p class="text-yellow-500 font-semibold mb-4">Rating: <%= home.rating %> ★</p>
+
+        <!-- Buttons -->
+        <div class="flex gap-4 mt-4">
+          <a href="http://localhost:4002/user/book-home">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              Book
+            </button>
+          </a>
+          <a href="http://localhost:4002/user/<%= home.id %>">
+            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+              Details
+            </button>
+          </a>
+        </div>
+
+      </li>
+    <% }) %>
+  </ul>
+
+</body>

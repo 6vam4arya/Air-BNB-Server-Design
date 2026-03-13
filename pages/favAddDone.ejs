@@ -1,0 +1,116 @@
+<!-- <%- include('../partials/head.ejs',{ title: "Done" }) %>
+<link rel="stylesheet" href="../output.css"/>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 text-center max-w-md">
+    
+    <h1 class="text-2xl font-bold text-green-600 mb-4">
+      ✅ Success
+    </h1>
+
+    <p class="text-gray-700 text-lg">
+      Home with ID = 
+      <span class="font-semibold text-gray-900">
+        <%= homeID %>
+      </span>
+      successfully added.
+    </p>
+
+    <div class="mt-6">
+      <a href="/user/favourites/homes">
+        <button class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          View Favourites
+        </button>
+      </a>
+    </div>
+
+  </div>
+
+</body> -->
+<%- include('../partials/head.ejs',{ title: "Success!" }) %>
+
+<style>
+  /* High-Energy Background Animation */
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Deep Vibrant Gradient */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff0080 100%);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    border: 5px solid #ff0080; /* Bright Pink Border */
+    max-width: 400px;
+    transform: rotate(-1deg); /* Playful tilt */
+  }
+
+  .success-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .btn-vibrant {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(255, 75, 43, 0.4);
+    transition: 0.3s;
+  }
+
+  .btn-vibrant:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.1);
+  }
+
+  h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .id-badge {
+    color: #ff0080;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+  <div class="glass-card">
+    <span class="success-icon">🌈</span>
+    <h1>AWESOME!</h1>
+    
+    <p style="font-size: 1.2rem; color: #555; margin-top: 15px;">
+      Home <span class="id-badge">#<%= homeID %></span> <br> 
+      is now in your favorites!
+    </p>
+
+    <a href="/user/favourites/homes" class="btn-vibrant">
+      View All Favourites
+    </a>
+    
+    <br><br>
+    <a href="/" style="color: #764ba2; font-weight: bold; text-decoration: none;">
+      ← Go To Home
+    </a>
+  </div>
+</body>
