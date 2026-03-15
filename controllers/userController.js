@@ -10,7 +10,8 @@ exports.bookHome = (req, res, next) => {
 exports.getHomeDetails = (req, res, next) => {
     console.log(`Requested home details are of : ${req.params.homeID}`);
     // response = object of registeredhome having passed homeID
-    Home.fetchAll((fileContents) => {
+    let promise = Home.fetchAll();
+    promise.then((fileContents) => {
         const reqHome = fileContents.find((element) => {
             return element.id == req.params.homeID;
         })
@@ -31,7 +32,8 @@ exports.addtofav = (req, res, next) => {
     const ID = req.params.homeID;
 
     // (ii.) get home obj
-    Home.fetchAll((fileContents) => {
+    let promise = Home.fetchAll();
+    promise.then((fileContents) => {
         let reqHome = fileContents.find((el) => {
             return el.id == ID;
         })

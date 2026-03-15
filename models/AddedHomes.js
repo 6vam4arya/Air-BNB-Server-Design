@@ -1,12 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const root = require('../utils/util');
-const filePath = path.join(root, 'fake-database', 'data.json');
-const favPath = path.join(root, 'fake-database', 'fav.json');
-
-// let allRegisteredHomes = [];
-// // internal memory of class where it stores data 
-
+const db = require('../utils/database');
 
 module.exports = class Home {
     // constructor method 
@@ -20,39 +12,15 @@ module.exports = class Home {
         this.id = id;
     }
 
-    // save this 
+    // write records into file
     save() {
-        // file should be written only when previous contents are completely read
-        Home.fetchAll((fileContents) => {
-            fileContents.push(this);
-
-            fs.writeFile(filePath, JSON.stringify(fileContents), (err) => {
-                if (err) {
-                    console.log(err);
-                    alert('ERROR DURING WRITING FILE!!');
-                }
-            })
-        })
+        db.execute('INSERT INTO homes (id,houseName,location,rating,cost,description) VALUES(?,?,?,?,?,?)',[this.id,this.housename,this.location,this.rating,this.cost,this.description]);
     }
 
-    // fs.writeFile() can write only JSON data and can read what kind of data ?
-    // retrieve all data inside the file because file conatins all registered homes
-    static fetchAll(taskAfterFileRead) {
-        // 1.) Read file
-        fs.readFile(filePath, (err, data) => {
-            if (err) {
-                console.log(err);
-                alert('ERROR DURING READING FILE!!');
-            }
-            let fileContents = [];
-
-            // initially file is empty and parsing empty file gives ERROR            
-            if (data && data.length > 0) { fileContents = JSON.parse(data); }
-            // only parsing when file is not empty, we are writing an ARRAY in file --> while reading an ARRAY will be returned, so SIMPLY ASSIGN IT TO FILECONTENTS, making it push in FILECONTENTS WILL CREATE AN ARRAY OF ARRAY
-
-            // 2.) let that function execute that makes some task happen only after file is completely read
-            taskAfterFileRead(fileContents);
-        })
+    // get all records
+    static fetchAll() {
+        return db.execute('SELECT * FROM homes');
+        // (returning the promise which will execute this task)
     }
 
     // already present data is in form of "Array of Objects"

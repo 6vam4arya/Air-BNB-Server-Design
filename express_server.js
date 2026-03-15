@@ -26,9 +26,14 @@ app.set('views','pages');
 // home page tackling middlewares
 app.get('/',(req,res,next)=>{
     // first get the fileContents(registeredhomes) and then render home.ejs
-    Home.fetchAll((fileContents)=>{
-        res.render('home',{registeredhomes : fileContents});
+    // Home.fetchAll((fileContents)=>{
+    //     res.render('home',{registeredhomes : fileContents});
+    // })
+    let promise = Home.fetchAll();
+    promise.then(([rows,cols_def])=>{
+        res.render('home',{registeredhomes : rows});
     })
+
 })
 
 
