@@ -1,0 +1,109 @@
+<%- include('../partials/head', { title: 'Home Page' }) %>
+<head>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<!-- <head><link rel="stylesheet" href="/home.css"/></head> -->
+
+<body class="bg-gradient-to-br from-indigo-500 via-white to-pink-500 min-h-screen font-sans">
+
+    <!-- Navbar -->
+    <nav class="backdrop-blur-lg bg-white/70 shadow-lg w-full p-4 flex justify-center space-x-8 sticky top-0 z-50 border-b border-gray-200">
+        <a href="http://localhost:4002/user/book-home"
+            class="text-blue-600 font-semibold hover:text-pink-500 transition duration-300 hover:scale-105">
+            Book Home
+        </a>
+        <a href="http://localhost:4002/user/favourites/homes"
+            class="text-blue-600 font-semibold hover:text-pink-500 transition duration-300 hover:scale-105">
+            Your Favourites
+        </a>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative text-center mt-16 mb-14 px-6 py-14 max-w-4xl mx-auto rounded-3xl 
+                   bg-white/60 backdrop-blur-xl shadow-2xl border border-white/40 overflow-hidden">
+
+        <!-- glowing background effect -->
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-300 rounded-full blur-3xl opacity-60"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl opacity-30"></div>
+
+        <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight">
+            Welcome to
+            <span class="bg-blue-500 bg-clip-text text-transparent">
+                Airbnb
+            </span>
+        </h1>
+
+        <p class="mt-6 text-xl text-gray-700 font-medium">
+            Welcome User
+        </p>
+
+        <p class="mt-2 text-md text-gray-500">
+            Available Homes
+        </p>
+
+    </header>
+
+    <!-- Home Listings -->
+    <main class="max-w-6xl mx-auto px-6 pb-12">
+        <!--{{details of home 1(in k-v) }, {details of home 2}}-->
+
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <% registeredhomes.forEach((home, index) => { %>
+                <li class="relative bg-white/70 backdrop-blur-lg rounded-2xl shadow-lg p-6 
+                           hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-white/40">
+
+                    <!-- glow effect -->
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-200 via-indigo-200 to-purple-200 opacity-0 hover:opacity-20 blur-xl transition"></div>
+
+                    <div class="relative z-10">
+                        <div class="mb-4">
+
+                            <strong class="text-lg text-indigo-600 font-bold"><%= index + 1 %>.</strong>
+                            <span class="ml-2 text-gray-800 font-semibold text-lg">
+                                <%= home.housename %>
+                                <%const Id = home._id.toString();%> <!--⭐-->
+                              <a href='http://localhost:4002/user/<%=Id%>'>
+                                  <button class="bg-blue-500 text-sm text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg active:bg-orange-700 transition duration-200">
+                                      Get Details
+                                  </button>
+                              </a>
+                            </span>
+                        </div>
+
+                        <p class="text-gray-600">💰 Cost: <span class="font-semibold">Rs <%= home.cost %></span></p>
+                        <p class="text-gray-600">📍 Location: <%= home.location %></p>
+                        <p class="text-gray-500 text-sm">ID: <%= home.id %></p>
+
+                        <p class="mt-2 text-yellow-500 font-semibold text-lg">
+                            ⭐ <%= home.rating %>
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-3">
+
+                            <a href='http://localhost:4002/user/book-home'>
+                                <button class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg active:bg-orange-700 transition duration-200">
+                                    Book
+                                </button>
+                            </a>
+
+                            <a href='http://localhost:4002/user/fav/<%=home.id%>'>
+                                <button class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg active:bg-orange-700 transition duration-200">
+                                    🖤 Favourite
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </li>
+
+            <% }) %>
+
+        </ul>
+    </main>
+
+</body>
+</html>
+
+<!--  ⭐ _id of home object is of 'Object ID type' which does not work in JS-->

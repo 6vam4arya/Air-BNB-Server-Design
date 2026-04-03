@@ -25,12 +25,18 @@ It demonstrates:
 
 The following technologies were used to build this project:
 
-- **Express.js** – Used to create the server and manage routes
-- **EJS (Embedded JavaScript)** – Used for dynamic HTML templates
-- **HTML & CSS** – Used to design the user interface
-- **NPM** – Used to manage project dependencies
-- **MVC** - Used as an architectural pattern for organizing and structuring the application efficiently.
--**Tailwind CSS** - Used for providing responsive and seamless design
+- **Express.js** – Utilized to build the server and handle routing.  
+- **EJS (Embedded JavaScript)** – Used for rendering dynamic HTML templates.  
+- **HTML & CSS** – Employed to design and structure the user interface.  
+- **NPM** – Used for managing project dependencies.  
+- **MVC (Model-View-Controller)** – Adopted as the architectural pattern to efficiently organize and structure the application.  
+- **Tailwind CSS** – Provides responsive and modern styling for the UI.  
+- **MongoDB** – Serves as the database for storing house details.  
+- **Mongoose ODM** – Facilitates interaction with MongoDB through an object data modeling layer.  
+- **Cookies and Sessions** – Managed using the Express Session package to handle client login sessions on the server.  
+- **Express Validator & Bcrypt.js** – Implemented for authentication by validating and sanitizing login/signup fields and securely hashing passwords.  
+- **Multer** – Enables and manages user file uploads.  
+- **REST APIs** – Allow the frontend and backend to communicate, supporting a decoupled client-server architecture for the project’s final implementation.
 
 ---
 
@@ -92,7 +98,8 @@ Once submitted, the new home appears on the **home page listing**.
 ### Data Logged in Console
 The detailed description is hidden from the home page for brevity, but is displayed on each individual home's details page.
 
-![Home Details](image-10.png)
+<!--Old Design ![Home Details](image-10.png) -->
+![Home Details](image-1.png)
 
 
 ### Data Logged in Console
