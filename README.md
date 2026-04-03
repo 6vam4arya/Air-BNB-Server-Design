@@ -59,21 +59,27 @@ This flow helps demonstrate how **frontend forms communicate with backend server
 
 ## Application Screens
 
-### Initial Home Page
+### Initial Home Page for User
 
-This is the main page where available homes are displayed.
+This is the entry page for a person logged in as User where available homes will be displayed.
 
 <!-- Old Design ![Home Page](image.png) -->
-![Home Page](image-5.png)
+<!-- Old Design [Home Page](image-5.png) -->
+![User Home](Website_Screenshots\image-2.png)
 
 ---
+### Initial Home Page for Host
+This is the entry page for a person logged in as Host where their added homes will be displayed.
+![Host Home](Website_Screenshots\image-3.png)
+
+
 
 ### Add Home Page (For Hosts)
 
 Hosts can use this page to **add their home listing** by filling out a form.
 
 <!--  Old Design ![Add Home Page](image-1.png) -->
-![Add Home Page](image-11.png)
+![Add Home Page](Website_Screenshots\image-11.png)
 
 ---
 
@@ -82,7 +88,8 @@ Hosts can use this page to **add their home listing** by filling out a form.
 After filling the form, the host submits the details to the server.
 
 <!--  Old Design ![Form Submission](image-2.png) -->
-![Form Submission](image-7.png)
+<!-- Old Design [Form Submission](image-7.png) -->
+![Form Submission](Website_Screenshots\image-4.png)
 
 ---
 
@@ -91,7 +98,9 @@ After filling the form, the host submits the details to the server.
 Once submitted, the new home appears on the **home page listing**.
 
 <!-- Old Design  ![Home Added](image-3.png) -->
-![Home Added](image-8.png)
+![Home Added](Website_Screenshots\image-8.png)
+![Home Added on User Side](Website_Screenshots\image-5.png)
+![Home Added on Host Side](Website_Screenshots\image-6.png)
 
 ---
 
@@ -99,13 +108,12 @@ Once submitted, the new home appears on the **home page listing**.
 The detailed description is hidden from the home page for brevity, but is displayed on each individual home's details page.
 
 <!--Old Design ![Home Details](image-10.png) -->
-![Home Details](image-1.png)
+![Home Details](Website_Screenshots\image-1.png)
 
 
 ### Data Logged in Console
 
 The submitted home details are also **printed in the server console** for verification.
 
-<!-- Old Design  ![Console Output](image-4.png) -->
-![Console Output](image-9.png)
+![Console Output](Website_Screenshots\image-7.png)
 
