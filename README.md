@@ -98,7 +98,6 @@ After filling the form, the host submits the details to the server.
 Once submitted, the new home appears on the **home page listing**.
 
 <!-- Old Design  ![Home Added](image-3.png) -->
-![Home Added](Website_Screenshots\image-8.png)
 ![Home Added on User Side](Website_Screenshots\image-5.png)
 ![Home Added on Host Side](Website_Screenshots\image-6.png)
 
